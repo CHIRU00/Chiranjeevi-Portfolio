@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Project Details - CHIRU</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <main id="main">
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Portfolio Details Slider -->
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="assets/img/projects/Color Detection.png" alt="Portfolio Image">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/projects/Color Detection 2.png" alt="Portfolio Image">
+                </div>
+                <!-- Add more slides if needed -->
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Description -->
+        <div class="row mt-4">
+          <!-- Portfolio Information and Description -->
+          <div class="col-lg-4">
+            <div class="portfolio-info card">
+              <div class="card-body">
+                <h3>Project Information</h3>
+                <ul>
+                  <li><strong>Category</strong>: Computer Vision</li>
+                  <li><strong>Project Date</strong>: 14 JUNE, 2023</li>
+                  <li><strong>Project URL</strong>: <a href="#">http://localhost/color_detection_project/</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="portfolio-description card">
+              <div class="card-body">
+                <h2>Real-Time Color Detection and Filtering</h2>
+                <h3>Project Overview</h3>
+                <p>
+                  The Real-Time Color Detection and Filtering project involves using computer vision techniques to capture live video feed from a camera and apply color-based filtering. The project demonstrates the ability to detect and isolate specific colors in real-time, showcasing the practical application of image processing and computer vision.
+                </p>
+                <h3>Features</h3>
+                <ul>
+                  <li><strong>Live Video Capture:</strong> The application captures live video feed from a connected camera (either default or external).</li>
+                  <li><strong>Color Filtering:</strong> The system can detect and isolate three primary colors (Red, Green, and Blue) based on their HSV color space values.</li>
+                  <li><strong>Real-Time Processing:</strong> The video feed is processed in real-time, displaying the original frame alongside the filtered frames for each color.</li>
+                  <li><strong>User-Friendly Interface:</strong> Multiple resizable windows display the original and color-filtered frames, providing a clear visualization of the detected colors.</li>
+                </ul>
+                <h3>Technologies and Tools Used</h3>
+                <ul>
+                  <li><strong>OpenCV:</strong> For capturing video, converting color spaces, applying color masks, and displaying frames.</li>
+                  <li><strong>NumPy:</strong> For handling numerical operations and defining color masks.</li>
+                  <li><strong>Python:</strong> For integrating various libraries and implementing the core logic of the application.</li>
+                </ul>
+                <h3>Implementation Details</h3>
+                <ul>
+                  <li><strong>Video Capture:</strong> The application uses OpenCV to capture video feed from the default or external camera. The video feed is processed frame-by-frame in real-time.</li>
+                  <li><strong>Color Space Conversion:</strong> Each frame is converted from the BGR color space to the HSV color space, which is more suitable for color-based filtering.</li>
+                  <li><strong>Color Masks:</strong> The application defines specific HSV ranges for Red, Green, and Blue colors. Using these ranges, color masks are created to isolate the desired colors within the frame.
+                    <ul>
+                      <li><strong>Red Mask:</strong> Defined by HSV ranges [161, 155, 84] to [179, 255, 255].</li>
+                      <li><strong>Blue Mask:</strong> Defined by HSV ranges [100, 150, 0] to [140, 255, 255].</li>
+                      <li><strong>Green Mask:</strong> Defined by HSV ranges [35, 52, 72] to [85, 255, 255].</li>
+                    </ul>
+                  </li>
+                  <li><strong>Bitwise Operations:</strong> Bitwise operations are used to apply the color masks to the original frame, resulting in frames where only the specified colors are visible.</li>
+                  <li><strong>Displaying Frames:</strong> OpenCV is used to create resizable windows to display the original frame and the color-filtered frames for Red, Green, and Blue.</li>
+                </ul>
+                <h3>Skills Demonstrated</h3>
+                <ul>
+                  <li><strong>Computer Vision:</strong> Applying color-based filtering techniques to process and analyze video frames in real-time.</li>
+                  <li><strong>Image Processing:</strong> Using OpenCV to perform color space conversion and bitwise operations to isolate specific colors.</li>
+                  <li><strong>Python Programming:</strong> Writing efficient code to handle real-time video capture and processing.</li>
+                  <li><strong>Real-Time Systems:</strong> Developing an application that processes and displays video feed in real-time, demonstrating the ability to handle continuous data streams.</li>
+                </ul>
+                <h3>Conclusion</h3>
+                <p>
+                  This project showcases the application of computer vision and image processing techniques to create a real-time color detection and filtering system. The ability to capture live video feed and apply color-based filtering in real-time demonstrates proficiency in using OpenCV and Python for practical computer vision tasks. This project can be further extended to include additional features such as detecting multiple colors simultaneously, applying different image processing techniques, and integrating with other systems for more complex applications.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Portfolio Details Section -->
+  </main><!-- End #main -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

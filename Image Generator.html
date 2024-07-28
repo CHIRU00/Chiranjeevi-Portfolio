@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Project Details - Image Generation System</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <main id="main">
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Portfolio Details Slider -->
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="assets/img/projects/img gen (1).png" alt="Generated Image 1">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/projects/img gen (2).png" alt="Generated Image 2">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/projects/img gen (3).png" alt="Generated Image 3">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/projects/img gen (4).png" alt="Generated Image 4">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/projects/img gen (5).png" alt="Generated Image 5">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/projects/img gen (6).png" alt="Generated Image 6">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/projects/img gen (7).png" alt="Generated Image 7">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Description -->
+        <div class="row mt-4">
+          <!-- Portfolio Information and Description -->
+          <div class="col-lg-4">
+            <div class="portfolio-info card">
+              <div class="card-body">
+                <h3>Project Information</h3>
+                <ul>
+                  <li><strong>Category</strong>: AI / Image Generation</li>
+                  <li><strong>Project date</strong>: May 2024</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="portfolio-description card">
+              <div class="card-body">
+                <h2>Image Generation System Using CLIP and VQGAN</h2>
+                <h3>Project Overview</h3>
+                <p>
+                  In this project, I developed an advanced image generation system that integrates OpenAI's CLIP model and the VQGAN architecture to produce visual representations that align with textual descriptions. This involved several technical processes and optimizations.
+                </p>
+                <h3>Model Integration</h3>
+                <ul>
+                  <li>Utilized the CLIP model (ViT-B/32) to encode textual descriptions into vector representations.</li>
+                  <li>Integrated VQGAN to decode these vector representations into high-quality images.</li>
+                  <li>Ensured both models were correctly loaded and configured, with CLIP for text encoding and VQGAN for image generation.</li>
+                </ul>
+                <h3>Data Normalization</h3>
+                <ul>
+                  <li>Implemented a normalization function to scale generated data between 0 and 1, ensuring consistency in the output images.</li>
+                </ul>
+                <h3>Parameter Optimization</h3>
+                <ul>
+                  <li>Set hyperparameters such as learning rate, batch size, weight decay, and noise factor for optimal model performance.</li>
+                  <li>Initialized learnable parameters for the image generation process using a custom Parameters class, with data parameterization and optimization using AdamW optimizer.</li>
+                </ul>
+                <h3>Text Encoding</h3>
+                <ul>
+                  <li>Tokenized and encoded textual prompts using CLIP to generate text embeddings.</li>
+                  <li>Created encodings for inclusion (positive prompts) and exclusion (negative prompts) to guide the generation process effectively.</li>
+                </ul>
+                <h3>Image Augmentation</h3>
+                <ul>
+                  <li>Applied augmentation techniques including random horizontal flipping and affine transformations to enhance the diversity and robustness of generated images.</li>
+                  <li>Used padding and cropping to generate multiple image crops for improved training.</li>
+                </ul>
+                <h3>Optimization Process</h3>
+                <ul>
+                  <li>Designed a loss function combining cosine similarity measures to align image encodings with text embeddings while penalizing deviations from exclusion prompts.</li>
+                  <li>Executed the optimization loop to iteratively minimize the loss, updating parameters to refine image quality.</li>
+                </ul>
+                <h3>Training Loop</h3>
+                <ul>
+                  <li>Developed a training loop that iteratively refines generated images over multiple iterations.</li>
+                  <li>Included visualization steps to monitor the progress of image generation, displaying intermediate results for evaluation.</li>
+                </ul>
+                <h3>Image Visualization</h3>
+                <ul>
+                  <li>Created functions to convert and display tensor images, facilitating the visualization of generated outputs at various stages of the training process.</li>
+                </ul>
+                <h3>Conclusion</h3>
+                <p>
+                  This project showcases my proficiency in utilizing advanced AI models and deep learning techniques for image generation tasks. It involved meticulous model integration, parameter tuning, and optimization, highlighting my ability to handle complex neural networks and produce high-quality, semantically aligned images from textual descriptions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Portfolio Details Section -->
+  </main><!-- End #main -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

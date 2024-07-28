@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>AWS End-to-End Web Application Project - Project Details</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <main id="main">
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Portfolio Details Slider -->
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="assets/img/projects/AWS.jpg" alt="AWS Amplify Deployment">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/projects/AWS 2.jpg" alt="Lambda Function">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Description -->
+        <div class="row mt-4">
+          <!-- Portfolio Information and Description -->
+          <div class="col-lg-4">
+            <div class="portfolio-info card">
+              <div class="card-body">
+                <h3>Project Information</h3>
+                <ul>
+                  <li><strong>Category</strong>: AWS / Web Application</li>
+                  <li><strong>Project date</strong>: July 2024</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="portfolio-description card">
+              <div class="card-body">
+                <h2>AWS End-to-End Web Application Project</h2>
+                <h3>Project Overview</h3>
+                <p>
+                  This project applies skills from my Brainovision internship, using AWS services like Amplify, Lambda, API Gateway, and DynamoDB. I developed an end-to-end web application, incorporating serverless computing, API integration, and data storage.
+                </p>
+                <h3>Prerequisites</h3>
+                <ul>
+                  <li>A text editor.</li>
+                  <li>An AWS account.</li>
+                  <li>Basic knowledge of AWS.</li>
+                </ul>
+                <h3>Step-by-Step Guide</h3>
+                <h4>1. Create and Host a Web Page using AWS Amplify</h4>
+                <p>Create a simple HTML page:</p>
+                <pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Math Application&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Math Calculation&lt;/h1&gt;
+    &lt;form id="mathForm"&gt;
+        &lt;input type="number" id="num1" placeholder="Enter first number"&gt;
+        &lt;input type="number" id="num2" placeholder="Enter second number"&gt;
+        &lt;button type="button" onclick="calculate()"&gt;Calculate&lt;/button&gt;
+    &lt;/form&gt;
+    &lt;script&gt;
+        async function calculate() {
+            const num1 = document.getElementById('num1').value;
+            const num2 = document.getElementById('num2').value;
+            const response = await fetch('YOUR_API_GATEWAY_URL', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ num1, num2 })
+            });
+            const result = await response.json();
+            alert(`Result: ${result}`);
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+                <h4>Deploying with Amplify</h4>
+                <ul>
+                  <li>Go to AWS Amplify in the AWS Management Console.</li>
+                  <li>Select "Host a web app."</li>
+                  <li>Connect your repository or upload the HTML file.</li>
+                  <li>Follow the instructions to deploy the app.</li>
+                </ul>
+                <h4>2. Use Lambda Function for Calculations</h4>
+                <p>Create a Lambda function using Python:</p>
+                <pre>
+<code>
+import json
+import math
+
+def lambda_handler(event, context):
+    num1 = event['num1']
+    num2 = event['num2']
+    result = num1 + num2  # or any other math operation
+    return {
+        'statusCode': 200,
+        'body': json.dumps(result)
+    }
+</code>
+</pre>
+                <h4>3. Invoke Lambda Function with API Gateway</h4>
+                <ul>
+                  <li>Create a new API and select REST API.</li>
+                  <li>Create a new resource and method (POST).</li>
+                  <li>Integrate the method with the Lambda function.</li>
+                  <li>Enable CORS.</li>
+                  <li>Deploy the API.</li>
+                </ul>
+                <h4>4. Store Results in DynamoDB</h4>
+                <p>Setup DynamoDB and update Lambda function with DynamoDB integration:</p>
+                <pre>
+<code>
+import json
+import math
+import boto3
+from datetime import datetime
+
+dynamodb = boto3.resource('dynamodb')
+table = dynamodb.Table('YourDynamoDBTableName')
+
+def lambda_handler(event, context):
+    num1 = event['num1']
+    num2 = event['num2']
+    result = num1 + num2  # or any other math operation
+    timestamp = datetime.utcnow().isoformat()
+    
+    table.put_item(Item={
+        'id': str(uuid.uuid4()),
+        'result': result,
+        'timestamp': timestamp
+    })
+    
+    return {
+        'statusCode': 200,
+        'body': json.dumps(result)
+    }
+</code>
+</pre>
+                <h4>5. Test and Deploy the Application</h4>
+                <ul>
+                  <li>Open the deployed web page.</li>
+                  <li>Enter numbers into the form and click "Calculate."</li>
+                  <li>Verify the result is correct and displayed in an alert pop-up.</li>
+                  <li>Redeploy with updates as needed.</li>
+                </ul>
+                <h4>6. Clean Up Resources</h4>
+                <p>Delete the following resources to avoid unnecessary costs:</p>
+                <ul>
+                  <li>DynamoDB table.</li>
+                  <li>Lambda function.</li>
+                  <li>API Gateway.</li>
+                </ul>
+                <h3>Conclusion</h3>
+                <p>
+                  By following these steps, you have successfully built, deployed, and tested an end-to-end web application using AWS services. This project demonstrates how to integrate various AWS components to create a functional and efficient web application.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Portfolio Details Section -->
+  </main><!-- End #main -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

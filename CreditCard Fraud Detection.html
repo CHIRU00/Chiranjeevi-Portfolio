@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Card Fraud Detection Using XGBoost - Project Details</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <main id="main">
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Portfolio Details Slider -->
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="assets/img/projects/CreditCard Fraud Detection (1).png" alt="Data Visualization">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/projects/CreditCard Fraud Detection (2).png" alt="Model Prediction">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Description -->
+        <div class="row mt-4">
+          <!-- Portfolio Information and Description -->
+          <div class="col-lg-4">
+            <div class="portfolio-info card">
+              <div class="card-body">
+                <h3>Project Information</h3>
+                <ul>
+                  <li><strong>Category</strong>: Machine Learning / Fraud Detection</li>
+                  <li><strong>Project date</strong>: June 2024</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="portfolio-description card">
+              <div class="card-body">
+                <h2>Card Fraud Detection Using XGBoost</h2>
+                <h3>Project Overview</h3>
+                <p>
+                  This project focuses on detecting fraudulent credit card transactions using machine learning. It was a final year internship project completed by me and my team during our internship at IIDT as AI-ML-DS Interns. We utilized the XGBoost algorithm for classification and prediction of fraudulent transactions.
+                </p>
+                <h3>Data Source</h3>
+                <ul>
+                  <li><strong>Source:</strong> Kaggle.com</li>
+                  <li><strong>Data Link:</strong> Credit Card Fraud Detection Dataset 2023</li>
+                </ul>
+                <h3>Required Libraries</h3>
+                <ul>
+                  <li>Python (3.x): Primary programming language for implementation.</li>
+                  <li>NumPy: For numerical computing and handling arrays.</li>
+                  <li>Pandas: For data manipulation and analysis.</li>
+                  <li>Matplotlib & Seaborn: For data visualization.</li>
+                  <li>Imbalanced-learn: For handling imbalanced datasets.</li>
+                  <li>Scikit-learn: Comprehensive machine learning library for various algorithms.</li>
+                  <li>TensorFlow or PyTorch: Deep learning frameworks for building neural networks (if needed).</li>
+                  <li>Keras: High-level neural networks API.</li>
+                  <li>Scikit-plot: For plotting common machine learning metrics.</li>
+                  <li>XGBoost or LightGBM: Gradient boosting libraries for effective classification.</li>
+                </ul>
+                <h3>Project Features</h3>
+                <ul>
+                  <li><strong>Model Training:</strong> The XGBoost algorithm was used to train the model on the credit card fraud dataset.</li>
+                  <li><strong>Feature Selection:</strong> The features used for training include anonymized transaction data labeled V1 to V28, along with the transaction amount.</li>
+                  <li><strong>Model Deployment:</strong> A Streamlit application was developed for easy interaction with the model, allowing users to input transaction details and get predictions on whether the transaction is legitimate or fraudulent.</li>
+                </ul>
+                <h3>Implementation Details</h3>
+                <ul>
+                  <li><strong>Data Loading:</strong> The dataset is loaded using Pandas.</li>
+                  <li><strong>Model Loading:</strong> The pre-trained XGBoost model is loaded from a pickle file.</li>
+                  <li><strong>Streamlit App:</strong> A user-friendly interface is created using Streamlit, where users can input a transaction ID to check the legitimacy of the transaction.</li>
+                  <li><strong>Prediction:</strong> The model takes the transaction details, processes the data, and predicts if the transaction is legitimate or fraudulent.</li>
+                  <li><strong>Result Display:</strong> The result is displayed on the Streamlit app, indicating whether the transaction is legitimate or fraudulent.</li>
+                </ul>
+                <h3>User Interaction</h3>
+                <ul>
+                  <li><strong>Transaction ID Input:</strong> Users can input a transaction ID to check its status.</li>
+                  <li><strong>Submit Button:</strong> On clicking the submit button, the app fetches the corresponding transaction details from the dataset.</li>
+                  <li><strong>Prediction Result:</strong> The app displays whether the transaction is legitimate or fraudulent based on the model's prediction.</li>
+                </ul>
+                <h3>Skills Demonstrated</h3>
+                <ul>
+                  <li>Machine Learning: Application of the XGBoost algorithm for fraud detection.</li>
+                  <li>Data Handling: Efficient manipulation and processing of large datasets using Pandas and NumPy.</li>
+                  <li>Visualization: Use of Matplotlib and Seaborn for data exploration and visualization.</li>
+                  <li>Model Deployment: Creating an interactive web application using Streamlit.</li>
+                  <li>Team Collaboration: Working collaboratively on a real-world problem during an internship.</li>
+                </ul>
+                <h3>Conclusion</h3>
+                <p>
+                  This project highlights the application of machine learning in detecting fraudulent credit card transactions. The use of XGBoost for classification, combined with a user-friendly Streamlit interface, demonstrates a comprehensive approach to solving a critical financial problem. The project showcases my proficiency in machine learning, data processing, and web application development, making it a valuable addition to my portfolio.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Portfolio Details Section -->
+  </main><!-- End #main -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
